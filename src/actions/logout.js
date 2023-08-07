@@ -12,7 +12,7 @@ export async function logoutAction() {
   deleteItem({
     key: "userName",
   });
-  toast.success("You’ve deleted your account!");
+  toast.success("Nofafanao ny kaontinao!");
   // return redirect
   return redirect("/");
 }
