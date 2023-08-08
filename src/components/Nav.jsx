@@ -11,7 +11,7 @@ const Nav = ({ userName }) => {
   return (
     <nav>
       <NavLink to="/" aria-label="Go to home">
-        <img src={home} alt="" height={30} />
+        <img src={home} alt="" height={20} />
         <span>iKaonty</span>
       </NavLink>
       {userName && (
@@ -26,7 +26,7 @@ const Nav = ({ userName }) => {
         >
           <button type="submit" className="btn btn--warning">
             <span>Hamafa ny mpampiasa</span>
-            <TrashIcon width={20} />
+            <TrashIcon width={15} />
           </button>
         </Form>
       )}

@@ -26,11 +26,16 @@ const AddExpenseForm = ({ budgets }) => {
   return (
     <div className="form-wrapper">
       <h2 className="h3">
-        Fandaniana -{" "}
-        <span className="accent">
-          {budgets.length === 1 && `${budgets.map((budg) => budg.name)}`}
-        </span>{" "}
-        Hanampy Vaovao
+        {budgets.length === 1 ? (
+          <>
+            Fandaniana :{" "}
+            <span className="accent">
+              {budgets.length === 1 && `${budgets.map((budg) => budg.name)}`}
+            </span>
+          </>
+        ) : (
+          "Fandaniana - Hanampy Vaovao"
+        )}
       </h2>
       <fetcher.Form method="post" className="grid-sm" ref={formRef}>
         <div className="expense-inputs">
