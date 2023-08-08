@@ -54,7 +54,7 @@ const AddBudgetForm = () => {
             <span>Andraso ...</span>
           ) : (
             <>
-              <span>Mamorona teti-bola</span>
+              <span>Mamorona tetibola</span>
               <CurrencyDollarIcon width={20} />
             </>
           )}

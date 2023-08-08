@@ -20,6 +20,9 @@ svg {
 
 :root {
   /* fonts */
+  --fs-100: clamp(0.49rem, calc(0.35rem + 0.17vw), 0.48rem);
+  --fs-50: clamp(0.27rem, calc(0.19rem + 0.09vw), 0.29rem);
+  
   --fs-200: clamp(0.78rem, calc(0.71rem + 0.35vw), 0.96rem);
   --fs-300: clamp(0.94rem, calc(0.84rem + 0.51vw), 1.2rem);
   --fs-400: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
@@ -31,6 +34,7 @@ svg {
 
   /* colors */
   /* --accent: 183 74% 44%; */
+  --table: 10, 32%, 40%, 0.04;
   --accent: 10, 32%, 40%;
   --bkg: 190 60% 98%;
   --text: 185 26% 9%;
@@ -39,7 +43,9 @@ svg {
   --warning: 4 66% 63%;
 
   /* utils */
-  --space-xs: 8px;
+  --space-main: 0px 24px 24px 24px;
+  /* --space-xs: 8px; */
+  --space-xs: 4px;
   --space-sm: 16px;
   --space-md: 24px;
   --space-lg: 32px;
@@ -71,7 +77,6 @@ body {
 }
 
 /* typography */
-
 h1,
 h2,
 h3,
@@ -84,17 +89,20 @@ h6 {
 
 h1,
 .h1 {
-  font-size: var(--fs-600);
+  /* font-size: var(--fs-600); */
+  font-size: var(--fs-400);
 }
 
 h2,
 .h2 {
-  font-size: var(--fs-500);
+  /* font-size: var(--fs-500); */
+  font-size: var(--fs-400);
 }
 
 h3,
 .h3 {
-  font-size: var(--fs-400);
+  /* font-size: var(--fs-400); */
+  font-size: var(--fs-300);
 }
 
 small {
@@ -107,7 +115,6 @@ p {
 }
 
 /* color utils */
-
 .accent {
   color: hsl(var(--accent));
 }
@@ -117,7 +124,6 @@ p {
 }
 
 /* links and buttons */
-
 :where(a, .btn) {
   --color: hsl(var(--text));
   --backdrop: hsl(var(--accent));
@@ -152,7 +158,7 @@ p {
   color: var(--color);
   padding: var(--space-xs) var(--space-sm);
   border: 2px solid var(--backdrop);
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,7 +295,8 @@ p {
 main {
   max-width: 1500px;
   width: 100%;
-  padding: var(--space-md) var(--space-md) var(--space-xl);
+  /* padding: var(--space-md) var(--space-md) var(--space-xl); */
+  padding: var(--space-main);
   margin-inline: auto;
   display: -ms-grid;
   display: grid;
@@ -334,7 +341,7 @@ nav a {
 
 /* forms */
 label {
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   font-weight: bold;
 }
 
@@ -485,6 +492,11 @@ select {
   color: hsl(var(--backdrop));
 }
 
+.budget-amount {
+  font-weight: bold;
+  font-size: var(--fs-300);
+}
+
 .budget > .flex-sm {
   padding-top: var(--space-sm);
   display: -webkit-box;
@@ -569,7 +581,7 @@ table {
 }
 
 tr:nth-child(odd) {
-  background-color: hsl(var(--accent) / 0.04);
+  background-color: hsla(var(--table));
 }
 
 td {
